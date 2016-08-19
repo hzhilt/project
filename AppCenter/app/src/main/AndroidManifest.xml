@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.meizu.appcenter" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="flyme.calendar.permission.READ_CALENDAR"/>
+    <uses-permission android:name="flyme.calendar.permission.WRITE_CALENDAR"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:name="com.meizu.MyApplication"
+        android:icon="@drawable/th_circulatep"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme"
+        android:uiOptions="splitActionBarWhenNarrow" >
+
+        <activity
+            android:name="com.meizu.AppList"
+            android:label="Applist" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.meizu.app" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.meizu.gridview.GridActivity"
+            android:label="Grid" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.meizu.app" />
+            </intent-filter>
+        </activity>
+
+        <!-- <activity -->
+        <!-- android:name="com.meizu.ListProject" -->
+        <!-- android:label="AppCenter" > -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+
+        <activity
+            android:name="com.meizu.listviewload.ListViewLoad"
+            android:label="ListView" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.meizu.app" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.meizu.webview.WebViewActivty"
+            android:label="WebView" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.meizu.app" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.meizu.share.ShareActicity"
+            android:label="share"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustResize" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.meizu.app" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.meizu.contentprovider.NoteActivity"
+            android:label="Note"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.meizu.app" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.meizu.realm.NoteListActivity"
+            android:label="ShowNote"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.meizu.app" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name="com.meizu.realm.CreateNoteActivity"
+            android:label="Detail" >
+        </activity>
+
+
+        <activity
+            android:name="com.meizu.contentprovider.DetailActivity"
+            android:label="Detail" >
+        </activity>
+
+        <provider
+            android:name="com.meizu.contentprovider.NoteProvider"
+            android:authorities="com.meizu.contentprovider" >
+        </provider>
+
+        <service android:name="com.meizu.aidl.AIDLService" >
+            <intent-filter>
+                <action android:name="android.intent.action.AIDLService" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.meizu.contentprovider.NoteService"
+            android:exported="true"
+            android:permission="adgasdlfj"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="android.intent.action.NoteService" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.meizu.contentprovider.MessengerService" />
+
+        <activity
+            android:name="com.meizu.aidl.AIDLActivity"
+            android:label="AIDL" >
+        </activity>
+        <activity
+            android:name="com.meizu.contentprovider.ServiceActivity"
+            android:label="ServiceActivity" >
+        </activity>
+        <activity
+            android:name="com.meizu.contentprovider.ServiceDetailActivity"
+            android:label="ServiceActivity" >
+        </activity>
+        <activity
+            android:name="com.meizu.loadimage.LoadImageActivity"
+            android:label="loadimage" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.meizu.app" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.meizu.volleyPicassoTest.VolleyActivity"
+            android:label="volley" >
+        </activity>
+        <activity
+            android:name="com.meizu.volleyPicassoTest.VolleyImageActivity"
+            android:label="volleyImage" >
+        </activity>
+        <activity
+            android:name="com.meizu.photos.PhotoListActivity"
+            android:label="Photos" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.meizu.app" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.meizu.photos.ImageDetailActivity"
+            android:label="volleyImage" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.meizu.app" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.meizu.centerui.SmartBarActivity"
+            android:label="SmartBarUI"
+            android:theme="@style/CustomTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.meizu.app" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.meizu.test.SmartBarTestActivity"
+            android:label="Test"
+            android:theme="@style/CustomTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.meizu.app" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.meizu.customview.CustomListActivity"
+            android:label="CustomList"
+            android:theme="@style/CustomTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.meizu.app" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.meizu.floatingwindow.FloatingWindowActivity"
+            android:label="floatingWindow" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.meizu.app" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.meizu.floatingwindow.FloatingWindowService"
+            android:process=":abc" >
+        </service>
+
+        <activity
+            android:name="com.meizu.test.EventActivity"
+            android:label="Event" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.meizu.app" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.meizu.recycleview.RecycleActivity"
+            android:label="RecycleView" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.meizu.app" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.meizu.paint.PaintActivity"
+            android:label="Paint" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.meizu.app" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.meizu.test.TouchActivity"
+            android:label="ZoomPic" >
+        </activity>
+        <activity
+            android:name="com.meizu.test.MyHome"
+            android:label="Launcher" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.meizu.app" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.meizu.animation.AnimationActivity"
+            android:label="Animation" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.meizu.app" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.meizu.photoanimation.PhotoAnimationActivity"
+            android:label="PhotoAnimation" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.meizu.app" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.meizu.photoanimation.ImageBigActivity"
+            android:label="PhotoAnimation"
+            android:theme="@style/Transparent" >
+        </activity>
+        <activity
+            android:name="com.meizu.calendarevent.EditEventActivity"
+            android:label="CalendarEvent" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.meizu.app" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.meizu.calendarevent.MyService"
+            android:process=":abcdefg" />
+
+        <activity
+            android:name="com.meizu.drawerlayout.LeftLayoutActivity"
+            android:label="LeftLayout" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.meizu.app" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="com.meizu.widgets.MyWidget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.meizu.appWidgetUpdate" >
+                </action>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/mywidget" />
+        </receiver>
+
+        <service
+            android:name="com.meizu.widgets.MyWidgetService"
+            android:exported="false"
+            android:permission="android.permission.BIND_REMOTEVIEWS" >
+        </service>
+
+        <activity
+            android:name="com.meizu.rxcupboard.RxActivity"
+            android:label="RxActivity"
+            android:windowSoftInputMode="adjustResize" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.meizu.app" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="com.meizu.widgets.NewAppWidget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/new_app_widget_info" />
+        </receiver>
+
+        <activity android:name="com.meizu.widgets.NewAppWidgetConfigureActivity" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name="com.meizu.daytoday.daytodayui.DayToolActivity"
+            android:label="day to day">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.meizu.app" />
+            </intent-filter>
+
+        </activity>
+
+
+        <activity android:name="com.meizu.progressbar.CustomViewActivity"
+            android:label="progressbar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.meizu.app" />
+            </intent-filter>
+
+        </activity>
+
+        <activity android:name="com.meizu.refresh.RefreshActivity"
+            android:label="refresh">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.meizu.app" />
+            </intent-filter>
+
+        </activity>
+
+        <activity android:name="com.meizu.md.MDActivity"
+            android:label="Material Design"
+            android:theme="@style/MyAppTheme">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.meizu.app" />
+            </intent-filter>
+
+        </activity>
+
+        <activity android:name="com.meizu.md.OkHttpActivity"
+            android:label="Material Design"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        </activity>
+
+        <activity android:name="com.meizu.md.AppListActivity"
+            android:label="Material Design"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        </activity>
+
+        <activity android:name="com.meizu.md.LoaderCustom"
+            android:label="Material Design">
+        </activity>
+        <activity android:name="com.meizu.md.CalendarDbActivity"
+            android:label="Material Design">
+        </activity>
+
+
+        <activity android:name="com.meizu.handler.HandlerActivity"
+            android:label="handler"
+            android:theme="@style/CustomActionBarStyle">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.meizu.app" />
+            </intent-filter>
+
+        </activity>
+
+        <activity android:name="com.meizu.weatherline.WeatherActivity"
+            android:label="Weather"
+            android:theme="@style/MyAppTheme">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.meizu.app" />
+            </intent-filter>
+
+        </activity>
+
+        <activity android:name="com.meizu.sensor.ToolActivity"
+            android:label="Tool"
+            android:theme="@style/AppTheme">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.meizu.app" />
+            </intent-filter>
+
+        </activity>
+
+        <activity android:name="com.meizu.CoordinatorActivity"
+            android:label="Coordinator"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.meizu.app" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

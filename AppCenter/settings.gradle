@@ -1,0 +1,3 @@
+include ':app', ':library', 'mvp', 'leakcanary', ':ActivityInstrumentatuion', ':CardView', ':jobsc', ':RecylerView', ':base-adapter-library', ':base-adapter-lib', ':sample1'
+include ':xUtils'
+include ':androidMonthCalendarWidgetmaster'
