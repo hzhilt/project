@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/bottomline">
+
+        <ImageView
+            android:layout_marginLeft="@dimen/bottomline_maiginleft"
+            android:layout_marginRight="@dimen/bottomline_marginright"
+            android:layout_marginTop="@dimen/margin_top"
+            android:id="@+id/bottom_line"
+            android:background="@color/lightgrey"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bottomheight" />
+
+</LinearLayout>

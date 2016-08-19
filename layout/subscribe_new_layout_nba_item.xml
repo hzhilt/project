@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@drawable/mz_card_new_list_divider" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="10:00"
+        android:id="@+id/time"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="常规赛"
+        android:id="@+id/desc"
+        android:layout_alignBottom="@+id/time"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="10000已订阅"
+        android:id="@+id/counts"
+        android:layout_alignTop="@+id/desc"
+        android:layout_alignParentEnd="true" />
+
+    <com.meizu.common.widget.RoundCornerImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:id="@+id/img1"
+        android:layout_below="@+id/time"
+        android:layout_alignParentStart="true" />
+
+    <com.meizu.common.widget.RoundCornerImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="12dp"
+        android:id="@+id/img2"
+        android:layout_below="@+id/time"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="66dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="湖人"
+        android:id="@+id/team1"
+        android:layout_alignBottom="@+id/img1"
+        android:layout_toEndOf="@+id/img1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="骑士"
+        android:id="@+id/team2"
+        android:layout_alignBottom="@+id/img2"
+        android:layout_toEndOf="@+id/img2" />
+
+    <com.meizu.common.widget.CircularProgressButton
+        android:id="@+id/button"
+        android:focusable="false"
+        android:text="订阅"
+        android:textColor="@color/color_firebrick"
+        style="@style/ButtonSubscribe.Recommend"
+        android:layout_below="@+id/team1"
+        android:layout_alignEnd="@+id/counts" />
+</RelativeLayout>

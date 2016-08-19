@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/loadingView"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        layout="@layout/full_loading" />
+
+    <include
+        android:id="@+id/reloadView"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        layout="@layout/reload_view" />
+
+    <ScrollView
+        android:id="@+id/horoscope_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginTop="10dip"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_left" />
+
+                <TextView
+                    android:id="@+id/short_text"
+                    android:layout_width="250dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="24dip"
+                    android:layout_marginRight="24dip"
+                    android:paddingTop="15dip"
+                    android:layout_weight="8"
+                    android:gravity="center"
+                    android:lineSpacingMultiplier="1.1"
+                    android:text="请把爱情和婚姻看成是独立的事情处理。"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dip"
+                    android:layout_marginTop="10dip"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_right" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginLeft="12dip"
+                android:layout_marginRight="12dip"
+                android:layout_marginTop="28dip"
+                android:background="@drawable/mz_card_list_divider_light" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dip"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_horoscope_flower" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dip"
+                        android:text="整体运" />
+
+                    <ImageView
+                        android:id="@+id/all_star"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dip" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_horoscope_heart" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dip"
+                        android:text="爱情运" />
+
+                    <ImageView
+                        android:id="@+id/love_star"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dip" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_horoscope_bag" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dip"
+                        android:text="事业运" />
+
+                    <ImageView
+                        android:id="@+id/career_star"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dip" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_horoscope_money" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dip"
+                        android:text="财富运" />
+
+                    <ImageView
+                        android:id="@+id/money_star"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dip" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginLeft="12dip"
+                android:layout_marginRight="12dip"
+                android:layout_marginTop="22dip"
+                android:background="@drawable/mz_card_list_divider_light" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="25dip"
+                android:layout_marginRight="25dip"
+                android:layout_marginTop="13dip"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/luckyColor_text"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="开运物品：衣服,鞋子" />
+
+                <TextView
+                    android:id="@+id/elegantDir_text"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="贵人方位：西北" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="25dip"
+                android:layout_marginRight="25dip"
+                android:layout_marginTop="5dip"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/friend_text"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="本周开运：买彩票" />
+
+                <TextView
+                    android:id="@+id/luckyNum_text"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="休闲解压：唱歌跳舞" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="12dip"
+                android:layout_marginTop="13dip"
+                android:background="@color/bg_color" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dip"
+                android:layout_marginRight="24dip"
+                android:layout_marginTop="8dip"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/all_bold_line"
+                    android:layout_width="2dip"
+                    android:layout_height="15dip"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/limegreen_color"
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dip"
+                    android:text="整体运势"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginLeft="12dip"
+                android:layout_marginRight="12dip"
+                android:layout_marginTop="8dip"
+                android:background="@drawable/mz_card_list_divider_light" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dip"
+                android:layout_marginRight="24dip"
+                android:layout_marginTop="13dip">
+
+                <TextView
+                    android:id="@+id/all_fortune_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingMultiplier="1.3"
+                    android:text="运气会慢慢变好，所有事情虽然不是一下子就成功，但是你心情已经可以保持平静不会乱发脾气，也不会过度担忧一些小事情"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="12dip"
+                android:layout_marginTop="10dip"
+                android:background="@color/bg_color" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dip"
+                android:layout_marginRight="24dip"
+                android:layout_marginTop="8dip"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/career_bold_line"
+                    android:layout_width="2dip"
+                    android:layout_height="15dip"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/dodgerblue_color"
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dip"
+                    android:text="事业运势"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginLeft="12dip"
+                android:layout_marginRight="12dip"
+                android:layout_marginTop="8dip"
+                android:background="@drawable/mz_card_list_divider_light" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dip"
+                android:layout_marginRight="24dip"
+                android:layout_marginTop="13dip">
+
+                <TextView
+                    android:id="@+id/career_fortune_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingMultiplier="1.3"
+                    android:text="人际关系的运气非常不错，和生活周遭的朋友将会有密切的往来，和同事之间一同出游或是拜访老同学都将会带来很多新资讯"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="12dip"
+                android:layout_marginTop="10dip"
+                android:background="@color/bg_color" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dip"
+                android:layout_marginRight="24dip"
+                android:layout_marginTop="8dip"
+                android:orientation="horizontal">
+
+
+                <View
+                    android:id="@+id/love_bold_line"
+                    android:layout_width="2dip"
+                    android:layout_height="15dip"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/tomato_color"
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dip"
+                    android:text="爱情运势"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginLeft="12dip"
+                android:layout_marginRight="12dip"
+                android:layout_marginTop="8dip"
+                android:background="@drawable/mz_card_list_divider_light" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dip"
+                android:layout_marginRight="24dip"
+                android:layout_marginTop="13dip">
+
+                <TextView
+                    android:id="@+id/love_fortune_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingMultiplier="1.3"
+                    android:text="有伴侣的你和另一半可以甜甜蜜蜜，所以要多互相空出时间来，好好约会一下"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="12dip"
+                android:layout_marginTop="10dip"
+                android:background="@color/bg_color" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dip"
+                android:layout_marginRight="24dip"
+                android:layout_marginTop="8dip"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/money_bold_line"
+                    android:layout_width="2dip"
+                    android:layout_height="15dip"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/coral_color"
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dip"
+                    android:text="财富运势"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginLeft="12dip"
+                android:layout_marginRight="12dip"
+                android:layout_marginTop="8dip"
+                android:background="@drawable/mz_card_list_divider_light" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dip"
+                android:layout_marginRight="24dip"
+                android:layout_marginTop="13dip"
+                android:paddingBottom="@dimen/activity_horizontal_margin">
+
+                <TextView
+                    android:id="@+id/money_fortune_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingMultiplier="1.3"
+                    android:text="最近会有升职加薪当上CEO的机会，请好好把握"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

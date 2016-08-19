@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/loadingView"
+        layout="@layout/full_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/eventContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <!--<android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">-->
+
+        <com.meizu.ptrpullrefreshlayout.PtrPullRefreshLayout
+            android:id="@+id/pull_to_refresh"
+            android:layout_width="match_parent"
+            app:ptrRingColor="@color/mz_theme_color_firebrick"
+            android:layout_height="match_parent">
+
+            <flyme.support.v7.widget.RecyclerView
+                android:id="@+id/agenda_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:saveEnabled="false"
+                android:scrollbars="none" />
+        </com.meizu.ptrpullrefreshlayout.PtrPullRefreshLayout>
+
+        <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+
+        <TextView
+            android:id="@+id/emptyTip"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/empty_view_no_event"
+            android:textColor="@color/text_color_gray"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/fab"
+        android:layout_width="56dip"
+        android:layout_height="56dip"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_fab"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_create" />
+
+</merge>

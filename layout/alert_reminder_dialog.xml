@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/list_content_full_padding"
+    android:paddingRight="@dimen/list_content_full_padding"
+    android:gravity="center"
+    android:paddingBottom="28dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:gravity="center_vertical"
+            android:maxLines="3"
+            android:text="@string/alert_title_reminder"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dip"
+            android:textColor="@color/text_color_gray"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dip"
+            android:singleLine="true"
+            android:text="@string/alert_title_reminder"
+            android:textColor="@color/text_color_gray"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dip"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="8dip">
+
+        <TextView
+            android:id="@+id/view_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dip"
+            android:background="@null"
+            android:text="@string/alert_button_detail"
+            android:textSize="14sp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/theme_color_red" />
+
+        <TextView
+            android:id="@+id/organizer_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/view_detail"
+            android:layout_marginRight="12dip"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dip"
+            android:textColor="@color/text_color_gray"
+            android:ellipsize="end"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <CheckBox
+        android:id="@+id/not_disturb"
+        android:layout_marginTop="8dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:paddingLeft="8dip"
+        android:text="@string/do_not_disturb_in_meeting"
+        android:textColor="@color/text_color_gray"
+        android:textSize="14sp" />
+
+</LinearLayout>

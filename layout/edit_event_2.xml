@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2010 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:calendar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/EventItemLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_edit_event_repeat"/>
+
+        <Spinner
+            android:id="@+id/repeats"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/edit_view_item_content_margin_start"
+            android:layout_weight="5"
+            android:background="@null"
+            android:dropDownWidth="@dimen/mz_popup_menu_item_min_width"
+            android:prompt="@string/repeats_label"
+            android:spinnerMode="dialog" />
+
+        <ImageView
+            android:id="@+id/repeat_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mz_spinner_normal_light" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginStart="@dimen/edit_view_divider_margin_start"
+        android:layout_marginEnd="@dimen/edit_view_divider_margin_end"
+        android:background="@drawable/mz_card_new_list_divider" />
+
+
+    <!--repeats-->
+    <LinearLayout
+        android:id="@+id/repeat_end_container"
+        style="@style/EventItemLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:gravity="center_vertical" >
+
+        <Spinner
+            android:id="@+id/repeats_until_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/edit_view_item_content_margin_start_without_icon"
+            android:layout_weight="6"
+            android:background="@null"
+            android:dropDownWidth="@dimen/mz_popup_menu_item_min_width"
+            android:prompt="@string/repeats_label"
+            android:spinnerMode="dialog" />
+
+        <ImageView
+            android:id="@+id/repeat_type_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mz_spinner_normal_light" />
+
+        <Button
+            android:id="@+id/repeats_until_count"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="16"
+            android:background="@null"
+            android:textAllCaps="false"
+            android:textSize="@dimen/event_button_date_size"
+            android:paddingEnd="9dip"
+
+            android:textColor="@color/text_color_dark"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/repeats_until_date"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="16"
+            android:background="@null"
+            android:textSize="@dimen/event_button_date_size"
+            android:textColor="@color/text_color_dark"
+            android:paddingEnd="9dip"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/repeat_count_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:background="@drawable/mz_spinner_normal_light"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/repeat_date_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:background="@drawable/mz_spinner_normal_light"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider_repeat_end"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginStart="@dimen/edit_view_divider_margin_start"
+        android:layout_marginEnd="@dimen/edit_view_divider_margin_end"
+        android:background="@drawable/mz_card_new_list_divider" />
+
+    <!-- REMINDERS -->
+    <LinearLayout
+        android:id="@+id/reminders_row"
+        style="@style/EventItemLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_edit_event_remind"/>
+
+        <LinearLayout
+            android:id="@+id/reminder_items_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/edit_view_item_content_margin_start"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginStart="@dimen/edit_view_divider_margin_start"
+        android:layout_marginEnd="@dimen/edit_view_divider_margin_end"
+        android:background="@drawable/mz_card_new_list_divider" />
+
+    <FrameLayout
+        android:id="@+id/edit_event_attendees_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/list_item_height"
+        android:gravity="center_vertical">
+
+        <!--如何实现这个控件显示hint，可以去掉-->
+        <com.meizu.commonwidget.RecipientEdit
+            android:id="@+id/attendees"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="55dp"
+            android:paddingEnd="12dp"
+            android:minHeight="@dimen/list_item_height"
+            calendar:mzHint="@string/attendees_label"
+            android:imeOptions="actionDone"
+            android:focusable="true" />
+
+        <ImageView
+            android:id="@+id/attendee_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/ic_invite_attendees"/>
+    </FrameLayout>
+
+    <View
+        android:id="@+id/divider_attendees_row"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginStart="@dimen/edit_view_divider_margin_start"
+        android:layout_marginEnd="@dimen/edit_view_divider_margin_end"
+        android:background="@drawable/mz_card_new_list_divider" />
+
+    <LinearLayout
+        android:id="@+id/description_row"
+        style="@style/EventItemLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_edit_event_remark"/>
+
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/edit_view_item_content_margin_start"
+            android:capitalize="sentences"
+            android:focusable="true"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/hint_description"
+            android:textSize="@dimen/event_hint_text_size"
+            android:inputType="textAutoCorrect|textCapSentences"
+            android:singleLine="true"
+            android:textColorHint="@color/text_color_gery_30" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginStart="@dimen/edit_view_divider_margin_start"
+        android:layout_marginEnd="@dimen/edit_view_divider_margin_end"
+        android:background="@drawable/mz_card_new_list_divider" />
+
+</LinearLayout>

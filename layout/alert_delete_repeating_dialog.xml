@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:paddingTop="18dip"
+    android:orientation="vertical">
+
+    <CheckBox
+        android:id="@+id/delete_following_event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="5dip"
+        android:text="@string/delete_this_and_following_event"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#FF999999" />
+
+</LinearLayout>

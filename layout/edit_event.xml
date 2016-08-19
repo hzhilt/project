@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+     Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/edit_event"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!--加载页面-->
+    <include
+        android:id="@+id/loading_msg"
+        layout="@layout/full_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <!--编辑页面-->
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="2"
+        android:animateLayoutChanges="true"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:id="@+id/content_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--<View-->
+            <!--android:id="@+id/event_bg"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_gravity="center_horizontal|top"-->
+            <!--android:layout_marginLeft="0dip"-->
+            <!--android:layout_marginRight="0dip"-->
+            <!--android:background="@null" />-->
+
+            <LinearLayout
+                android:id="@+id/two_pane"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!-- TOP HALF -->
+                <include
+                    layout="@layout/edit_event_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/add_more_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="@dimen/hint_text_margin_right"
+                    android:layout_marginStart="@dimen/hint_text_margin_right"
+                    android:layout_marginTop="10dp"
+                    android:background="@null"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/action_edit_more"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/event_hint_text_size" />
+
+                <!-- BOTTOM HALF GUESTS/ATTENDEES -->
+                <include
+                    android:id="@+id/bottom_group"
+                    layout="@layout/edit_event_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+        </FrameLayout>
+    </ScrollView>
+    <!--底部button-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@drawable/mz_card_list_divider_light" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@drawable/mz_smartbar_background_grey">
+
+            <Button
+                android:id="@+id/cancel_event"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:background="@drawable/mz_list_selector_background"
+                android:text="@string/action_edit_cancel"
+                android:textSize="18sp"
+                android:textColor="@color/text_color_black" />
+
+            <View
+                android:id="@+id/divider_menu"
+                android:layout_width="2px"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:background="@drawable/mz_card_list_divider_light" />
+
+            <Button
+                android:id="@+id/save_event"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:background="@drawable/mz_list_selector_background"
+                android:text="@string/action_edit_save"
+                android:textSize="18sp"
+                android:textColor="@color/mz_theme_color_firebrick" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

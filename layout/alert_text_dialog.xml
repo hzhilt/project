@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingTop="12dp"
+    android:layout_gravity="center_vertical"
+    android:id="@+id/my_layout">
+
+    <com.meizu.flyme.calendar.view.EditTextPreIME
+        android:id="@+id/InputText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:drawingCacheQuality="auto"
+        android:maxLines="3"
+        android:hint="@string/alert_title_hint"
+        style="@style/Theme.Flyme.AppCompat.Light.Alert.Edittext.Color.FireBrick"
+        android:imeOptions="actionDone" />
+
+</LinearLayout>

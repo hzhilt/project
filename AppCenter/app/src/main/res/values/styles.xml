@@ -1,0 +1,97 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="@android:style/Theme.Holo.Light">
+
+    <!-- Customize your theme here. -->
+    </style>
+
+    <style name="MyThemeThree" parent="android:Theme.Holo.Light"/>
+
+    <style name="MyThemeOne">
+
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:background">@color/grey</item>
+        <item name="android:windowActionBar">true</item>
+    </style>
+
+    <style name="MyThemeTwo">
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowBackground">@color/black</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowActionBarOverlay">false</item>
+    </style>
+
+    <style name="ButtonStyle">
+        <item name="android:background">@color/pink</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+
+
+    <style name="NOWithActionBar">
+
+    </style>
+
+
+    <style name="CustomTheme" parent="@android:style/Theme.DeviceDefault.Light">
+        <item name="android:actionBarStyle">@style/CustomActionBarStyle</item>
+        <item name="android:actionOverflowButtonStyle">@style/CustomActionButtonOverflowStyle</item>
+        <item name="android:actionButtonStyle">@style/CustomActionButtonStyle</item>
+        <!--<item name="android:windowTranslucentStatus">true</item>-->
+        <!--<item name="android:windowTranslucentNavigation">true</item>-->
+    </style>
+
+    <!-- overflow图标 -->
+    <style name="CustomActionButtonOverflowStyle" parent="@android:style/Widget.DeviceDefault.Light.ActionButton.Overflow">
+        <item name="android:src">@drawable/mz_ic_sb_more</item>
+    </style>
+
+    <!-- back键图标 通过style定制back方法只在flyme4.0系统有效-->
+    <style name="CustomActionButtonStyle" parent="@android:style/Widget.DeviceDefault.Light.ActionButton">
+        <item name="android:src">@drawable/mz_ic_sb_back</item>
+    </style>
+
+    <!-- smartbar及actionbar顶栏背景 -->
+    <style name="CustomActionBarStyle" parent="@android:style/Widget.DeviceDefault.Light.ActionBar">
+        <item name="android:background">@drawable/mz_titlebar_background</item>
+        <item name="android:backgroundSplit">@drawable/mz_smartbar_background</item>
+    </style>
+
+    <style name="Transparent">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="MyAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--状态栏颜色-->
+        <item name="colorPrimaryDark">@color/Indigo_colorPrimaryDark</item>
+        <!--Toolbar颜色-->
+        <item name="colorPrimary">@color/Indigo_colorPrimary</item>
+        <!--返回键样式-->
+        <item name="drawerArrowStyle">@style/AppTheme.DrawerArrowToggle</item>
+    </style>
+    <style name="AppTheme.DrawerArrowToggle" parent="Base.Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="CommonDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+
+    <style name="DialogAnimationStyle" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/dialog_enter</item>  //进入时的动画
+        <item name="@android:windowExitAnimation">@anim/dialog_exit</item>    //退出时的动画
+    </style>
+
+</resources>

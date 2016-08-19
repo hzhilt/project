@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/mz_list_item_height"
+    android:background="@color/window_background"
+    android:orientation="vertical">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:background="@drawable/mz_card_list_divider_light" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/mz_list_selector_background"
+        android:gravity="center_vertical"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_weight="0.85"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/event_item_margin_left"
+                android:layout_marginRight="@dimen/event_item_margin_right"
+                android:layout_marginBottom="2dip"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+                <ImageView
+                    android:src="@drawable/ic_yi"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="7dp"/>
+
+                <TextView
+                    android:id="@+id/sultable_text"
+                    android:textSize="14sp"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="18dip"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="沐浴 解除 破屋 生子 祈福 治病 造车 修造 动土 移徙 入宅"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/event_item_margin_left"
+                android:layout_marginRight="@dimen/event_item_margin_right"
+                android:layout_marginTop="2dip"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+                <ImageView
+                    android:src="@drawable/ic_ji"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="7dp"/>
+
+
+                <TextView
+                    android:id="@+id/taboo_text"
+                    android:textSize="14sp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="18dip"
+                    android:textColor="@android:color/black"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="安葬 开光 开市 做灶 安葬 开光 开市 做灶 安葬 开光 开市 做灶"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:orientation="vertical">
+            <ImageView
+                android:src="@drawable/mz_arrow_next_right_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <flyme.support.v7.widget.FadeViewPager
+        android:id="@+id/bannerPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/subscribe_banner_margin"
+        android:paddingLeft="@dimen/banner_pager_padding"
+        android:paddingRight="@dimen/banner_pager_padding"
+        android:clipToPadding="false" />
+
+    <!--<com.meizu.common.widget.PagerIndicator
+        android:id="@+id/tabs"
+        android:layout_width="wrap_content"
+        android:layout_height="11dip"
+        android:layout_gravity="bottom|center_horizontal"
+        android:orientation="horizontal" />-->
+
+</merge>

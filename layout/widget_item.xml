@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+     Copyright (C) 2011 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_row"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/appwidget_list_item_minHeight"
+    android:paddingLeft="@dimen/list_content_padding_left"
+    android:paddingRight="@dimen/list_content_padding_right"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="62dip"
+        android:maxWidth="74dp"
+        android:minWidth="58dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical|right">
+
+        <TextView
+            android:id="@+id/when_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|right"
+            android:includeFontPadding="false"
+            android:fadingEdgeLength="0dp"
+            android:textColor="@color/appwidget_time"
+            android:textSize="@dimen/appwidget_when_time_text_size" />
+
+        <TextView
+            android:id="@+id/when_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|right"
+            android:includeFontPadding="false"
+            android:textColor="@color/appwidget_when"
+            android:textSize="@dimen/appwidget_when_text_size" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/item_divider"
+        android:layout_width="0.4dip"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_widget_content_divider_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/appwidget_title"
+            android:textSize="@dimen/appwidget_title_text_size" />
+    </LinearLayout>
+
+</LinearLayout>

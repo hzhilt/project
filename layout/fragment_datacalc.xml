@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/list_item_height"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/tool_margin_start"
+            android:text="@string/tool_data"
+            android:focusable="true"
+            android:textColor="@color/event_color_gray"
+            android:textSize="@dimen/event_hint_text_size" />
+
+        <Button
+            android:id="@+id/calc_start_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:background="@null"
+            android:gravity="start|center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/text_color_dark"
+            android:textSize="@dimen/event_hint_text_size" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginEnd="@dimen/tool_divider_margin"
+        android:layout_marginStart="@dimen/tool_divider_margin"
+        android:background="@drawable/mz_card_new_list_divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/list_item_height"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/calc_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tool_margin_start"
+            android:background="@null" />
+
+        <ImageView
+            android:id="@+id/calc_type_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="11dip"
+            android:background="@drawable/bg_spinner_icon" />
+
+        <View
+            android:layout_width="0.5dip"
+            android:layout_height="20dp"
+            android:layout_marginLeft="11dip"
+            android:background="@drawable/mz_card_list_divider_light" />
+
+        <EditText
+            android:id="@+id/calc_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:background="@null"
+            android:capitalize="sentences"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:hint="@string/calc_hint_num"
+            android:textSize="@dimen/tool_text_size"
+            android:inputType="textAutoCorrect|textCapSentences"
+            android:maxLength="5"
+            android:singleLine="true"
+            android:textColorHint="@color/text_color_gery_30" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="start|center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/text_color_dark"
+            android:textSize="@dimen/event_hint_text_size" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginEnd="@dimen/tool_divider_margin"
+        android:layout_marginStart="@dimen/tool_divider_margin"
+        android:background="@drawable/mz_card_new_list_divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:paddingLeft="@dimen/tool_button_padding"
+        android:paddingRight="@dimen/tool_button_padding"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/calc_check"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:background="@drawable/button_style"
+            android:text="@string/calc_check" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="@color/bg_color" />
+
+
+    <LinearLayout
+        android:id="@+id/layout_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                >
+
+                <View
+                    android:layout_width="2dip"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="@dimen/tool_margin_start"
+                    android:background="@color/event_info_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:text="@string/calc_checkout"
+                    android:textColor="@color/event_color"
+                    android:focusable="true"
+                    android:textSize="@dimen/tool_title_text_size" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/calc_new_event"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="@dimen/tool_margin_end"
+                android:gravity="end"
+                android:text="@string/tool_calc_create_event"
+                android:background="@drawable/mz_list_selector_background"
+                android:textColor="@color/text_color_gery_30"
+                android:focusable="true"
+                android:textSize="@dimen/tool_title_right_text_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginEnd="@dimen/tool_divider_margin"
+            android:layout_marginStart="@dimen/tool_divider_margin"
+            android:background="@drawable/mz_card_new_list_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="112dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:focusable="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/error_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="14sp"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/calc_major_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/event_info_color"
+                    android:textSize="@dimen/tool_red_result_text_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lunar_extra_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/calc_secondary_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/calc_final_lunar_weekday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/tool_calc_result_margin"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/calc_final_lunar_istoday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/tool_calc_result_margin"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color" />
+
+</LinearLayout>

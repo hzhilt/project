@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:common="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/loadingView"
+        layout="@layout/full_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.meizu.common.widget.EmptyView
+        android:id="@+id/no_network_empty_toast"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        common:mcSrcOfImage="@drawable/mz_ic_empty_view_no_network"
+        common:mcTitle="@string/mz_wif_setting_dialog_message"
+        common:mcTitleTextAppearance="@style/TextAppearance.Small.EmptyViewToast.Title"
+        common:mcTopMarginOfTips="12dip" />
+
+    <view
+        android:id="@+id/recycler"
+        class="flyme.support.v7.widget.RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:saveEnabled="false"
+        android:scrollbars="vertical"/>
+
+    <!--<ViewStub-->
+        <!--android:id="@+id/header_stub"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/banner_image_height"-->
+        <!--android:layout="@layout/header_banner" />-->
+
+</FrameLayout>

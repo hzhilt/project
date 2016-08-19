@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.meizu.flyme.calendar.dateview.ui.fragment.MonthWeekHeader
+        android:id="@+id/monthWeekHeader"
+        android:background="@color/mz_theme_color_firebrick"
+        android:layout_width="match_parent"
+        android:paddingLeft="@dimen/mainview_padding"
+        android:paddingRight="12dip"
+        android:layout_height="@dimen/week_row_height"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <com.meizu.flyme.calendar.dateview.ui.slideview.LinkSlideView
+            android:id="@+id/link_slide"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <com.meizu.flyme.calendar.dateview.ui.monthview.MonthViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"/>
+        </com.meizu.flyme.calendar.dateview.ui.slideview.LinkSlideView>
+
+        <com.meizu.flyme.calendar.dateview.ui.weekview.WeekViewPager
+            android:id="@+id/week_pager"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.meizu.flyme.calendar.dateview.ui.slideview.SlideView
+            android:id="@+id/slide_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/grid_height">
+
+            <com.meizu.flyme.calendar.dateview.event.CustomEventViewPager
+                android:id="@+id/event_pager"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/bg_color" />
+        </com.meizu.flyme.calendar.dateview.ui.slideview.SlideView>
+    </RelativeLayout>
+    
+    <!-- <WeekViewPager
+        android:id="@+id/week_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="450dip" />
+         -->
+</LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="type">
+        <item>全部</item>
+        <item>工作</item>
+        <item>生活</item>
+        <item>临时</item>
+        <item>加密</item>
+        <item>新建分组</item>
+    </string-array>
+
+    <string-array name="planets_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+
+    <string-array name="cat_names">
+        <item>George</item>
+        <item>Zubin</item>
+        <item>Carlos</item>
+        <item>Frank</item>
+        <item>Charles</item>
+        <item>Simon</item>
+        <item>Fezra</item>
+        <item>Henry</item>
+        <item>Schuster</item>
+    </string-array>
+</resources>

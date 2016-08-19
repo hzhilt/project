@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:weightSum="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_weight="0.7"
+            android:layout_height="match_parent"
+            android:layout_marginStart="12dip"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/event_item_margin_left"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/movie_name"
+                    android:text="大鱼海棠"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/movie_time"
+                    android:text="9.8号上映,啦啦啦拉拉"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/movie_desc"
+                    android:text="灰常好看"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <com.meizu.common.widget.RoundCornerImageView
+                android:id="@+id/movie_icon"
+                android:layout_width="54dp"
+                android:layout_height="80dp"
+                android:background="@drawable/calendar_widget_preview"
+                app:mzCornerRadiusX="4"
+                app:mzCornerRadiusY="4"
+                android:padding="0dip"
+                android:scaleType="fitXY" />
+
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_weight="0.3"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/movie_counts"
+                android:text="100000已订阅"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.meizu.common.widget.CircularProgressButton
+                android:id="@+id/movie_action"
+                android:focusable="false"
+                android:text="订阅"
+                android:textColor="@color/color_firebrick"
+                style="@style/ButtonSubscribe.Recommend"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

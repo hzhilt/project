@@ -1,0 +1,382 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="20dip">
+
+        <TextView
+            android:id="@+id/almanac_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dip"
+            android:text="农历 四月三十"
+            android:textColor="@color/color_firebrick"
+            android:textSize="30sp" />
+
+
+        <TextView
+            android:id="@+id/era_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="3dip"
+            android:text="乙末羊年 辛己月 甲申日 星期五"
+            android:textSize="14sp" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:layout_marginLeft="12dip"
+            android:layout_marginRight="12dip"
+            android:layout_marginTop="25dip"
+            android:background="@drawable/mz_card_list_divider_light" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dip"
+            android:layout_marginRight="24dip"
+            android:layout_marginTop="18dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dip"
+                android:contentDescription="@string/compatibility"
+                android:src="@drawable/ic_yi_big" />
+
+            <TextView
+                android:id="@+id/sultable_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="18dip"
+                android:text="沐浴 解除 破屋 生子 祈福 治病 造车 修造 动土 移徙 入宅"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dip"
+            android:layout_marginRight="24dip"
+            android:layout_marginTop="10dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dip"
+                android:contentDescription="@string/incompatibility"
+                android:src="@drawable/ic_ji_big" />
+
+
+            <TextView
+                android:id="@+id/taboo_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="18dip"
+                android:text="安葬 开光 开市 做灶 安葬 开光 开市 做灶 安葬 开光 开市 做灶"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:layout_marginLeft="12dip"
+            android:layout_marginRight="12dip"
+            android:layout_marginTop="18dip"
+            android:background="@drawable/mz_card_list_divider_light" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="18dip"
+            android:layout_marginRight="18dip"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/happyGod_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="喜神"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/happyDir_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="东南"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dip"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/mz_card_list_divider_light"
+                android:gravity="center_vertical" />
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/luckyGod_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="福神"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/luckyDir_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="西北" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dip"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/mz_card_list_divider_light"
+                android:gravity="center_vertical" />
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/mammon_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="财神"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/mammonDir_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="东南" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:layout_marginLeft="12dip"
+            android:layout_marginRight="12dip"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@drawable/mz_card_list_divider_light" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dip"
+            android:layout_marginRight="18dip"
+            android:layout_marginTop="22dip"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginLeft="6dip"
+                android:gravity="top"
+                android:text="吉神"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/lucky_angel_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dip"
+                android:lineSpacingMultiplier="1.3"
+                android:paddingTop="1dip"
+                android:text="户门卢外西北"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dip"
+            android:layout_marginRight="18dip"
+            android:layout_marginTop="22dip"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginLeft="6dip"
+                android:gravity="top"
+                android:text="凶神"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/demon_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dip"
+                android:lineSpacingMultiplier="1.3"
+                android:paddingTop="1dip"
+                android:text="南方鬼金羊-凶"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dip"
+            android:layout_marginRight="18dip"
+            android:layout_marginTop="22dip"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginLeft="6dip"
+                android:gravity="top"
+                android:text="冲煞"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/eval_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dip"
+                android:lineSpacingMultiplier="1.3"
+                android:paddingTop="1dip"
+                android:text="冲虎煞男"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dip"
+            android:layout_marginRight="18dip"
+            android:layout_marginTop="22dip"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginLeft="6dip"
+                android:gravity="top"
+                android:text="五行"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/fiveElements_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dip"
+                android:lineSpacingMultiplier="1.3"
+                android:paddingTop="1dip"
+                android:text="井泉水 平之位"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dip"
+            android:layout_marginRight="18dip"
+            android:layout_marginTop="22dip"
+            android:orientation="horizontal"
+            android:paddingBottom="22dip">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginLeft="6dip"
+                android:gravity="top"
+                android:text="彭祖"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/pengzu_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dip"
+                android:lineSpacingMultiplier="1.3"
+                android:paddingTop="1dip"
+                android:text="甲不开创财物耗散 申不安床鬼畜入房"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

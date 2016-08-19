@@ -1,0 +1,131 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <View
+        android:id="@+id/headerView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/week_row_height"
+        android:background="@color/mz_theme_color_firebrick" />
+
+    <FrameLayout
+        android:id="@+id/realtabcontent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--    <com.meizu.flyme.calendar.view.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_margin="20dp"
+            android:src="@drawable/ic_create"
+            app:fab_shadow="false"
+            app:fab_colorNormal="@color/accent"
+            app:fab_colorPressed="@color/accent_pressed"
+            app:fab_colorRipple="@color/ripple" />-->
+
+    <ImageView
+        android:id="@+id/fab"
+        android:layout_width="56dip"
+        android:layout_height="56dip"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_fab"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_create"
+        android:contentDescription="@string/event_create"/>
+
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="52dip"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:background="@drawable/mz_card_list_divider_light" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingLeft="12dip"
+            android:paddingRight="12dip">
+            <LinearLayout
+                android:id="@+id/event_list_btn"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_marginTop="@dimen/smart_bar_image_margin_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/smart_event" />
+                <TextView
+                    android:layout_marginTop="@dimen/smart_bar_text_margin_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/event_smart_bar"
+                    android:textColor="@color/smart_bar_text_color"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/new_event_btn"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_marginTop="@dimen/smart_bar_image_margin_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/smart_new_event" />
+
+                <TextView
+                    android:layout_marginTop="@dimen/smart_bar_text_margin_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/new_event_smart_bar"
+                    android:textColor="@color/smart_bar_text_color"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/subscribe_btn"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_marginTop="@dimen/smart_bar_image_margin_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/smart_subscribe" />
+                <TextView
+                    android:layout_marginTop="@dimen/smart_bar_text_margin_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/subscribe_smart_bar"
+                    android:textColor="@color/smart_bar_text_color"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/userInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="12dp"
+        android:paddingLeft="16dip"
+        android:paddingRight="16dip"
+        android:paddingTop="12dip">
+
+        <ImageView
+            android:id="@+id/userIcon"
+            android:layout_width="@dimen/user_icon_size"
+            android:layout_height="@dimen/user_icon_size"
+            android:background="@null" />
+
+        <TextView
+            android:id="@+id/accountNickName"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/nextIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mz_arrow_next_right" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dip"
+        android:background="@color/bg_color" />
+
+    <TextView
+        android:id="@+id/emptyTip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/subscription_no_data"
+        android:textColor="#4d000000"
+        android:textSize="16sp" />
+
+    <view
+        android:id="@+id/recycler"
+        class="flyme.support.v7.widget.RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

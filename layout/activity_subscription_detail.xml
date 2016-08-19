@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:common="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/loadingView"
+        layout="@layout/full_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.meizu.common.widget.EmptyView
+        android:id="@+id/no_network_empty_toast"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        common:mcSrcOfImage="@drawable/mz_ic_empty_view_no_network"
+        common:mcTitle="@string/mz_wif_setting_dialog_message"
+        common:mcTitleTextAppearance="@style/TextAppearance.Small.EmptyViewToast.Title"
+        common:mcTopMarginOfTips="12dip" />
+
+    <ScrollView
+        android:id="@+id/scroll_view_sub_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="65dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:scrollbarStyle="outsideOverlay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dip">
+
+
+            <com.meizu.flyme.calendar.subscription.ui.RoundImageView
+                android:id="@+id/detailImg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sub_detail_image_height"
+                android:layout_gravity="center"
+                android:duplicateParentState="true"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="23dp"
+                android:orientation="horizontal">
+
+                <com.meizu.flyme.calendar.icalendar.ColorChipView
+                    android:id="@+id/sub_info"
+                    android:layout_width="3dp"
+                    android:layout_height="3dp"
+                    android:layout_gravity="center_vertical" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:text="简介"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="13dip"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dip"
+                android:fadingEdgeLength="0dp"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="8dip"
+                android:textColor="@color/text_color_gray"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="9dp"
+                android:orientation="horizontal">
+
+                <com.meizu.flyme.calendar.icalendar.ColorChipView
+                    android:id="@+id/sub_time"
+                    android:layout_width="3dp"
+                    android:layout_height="3dp"
+                    android:layout_gravity="center_vertical" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:text="时间"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <com.meizu.flyme.calendar.view.ScrollDisabledListView
+                android:id="@+id/events_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:clickable="false"
+                android:divider="@null"
+                android:paddingTop="8dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ViewStub
+        android:id="@+id/bottom_option_view_stub"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_gravity="bottom"
+        android:layout="@layout/subscription_detail_bottom_option_button" />
+
+</FrameLayout>

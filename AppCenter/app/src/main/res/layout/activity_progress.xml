@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.meizu.progressbar.MyProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+
+        app:roundColor="#D1D1D1"
+        app:roundProgressColor="@android:color/black"
+        app:textColor="#9A32CD"
+        app:roundWidth="10dip"
+        app:style="FILL"
+        app:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.meizu.progressbar.CircleProgress
+            android:id="@+id/circle_progress"
+            android:layout_marginLeft="50dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:circle_progress="10"/>
+
+        <com.meizu.progressbar.CircleProgress
+            android:layout_marginLeft="50dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:circle_progress="25"
+            app:circle_finished_color="#ff0000"
+            app:circle_unfinished_color="#00ff00"
+            app:circle_text_color="#ffffff"
+            app:circle_suffix_text="$"
+            app:circle_text_size="16sp"/>
+    </LinearLayout>
+
+</LinearLayout>

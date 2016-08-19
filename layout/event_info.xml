@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--加载页面-->
+    <include
+        android:id="@+id/loading_msg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/full_loading" />
+
+    <!--详情页面-->
+    <ScrollView
+        android:id="@+id/event_info_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:animateLayoutChanges="true"
+        android:fadingEdge="none"
+        android:scrollbarStyle="outsideOverlay"
+        android:fillViewport="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/content_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:background="@color/bg_color"/>
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/EventInfoLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:autoLink="web|email|phone"
+                android:fadingEdgeLength="0dp"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="2dip"
+                android:textColor="@color/event_info_color"
+                android:gravity="center_vertical|center_horizontal"
+                android:textColorLink="@color/event_info_link_color"
+                android:textSize="@dimen/event_info_title_size"
+                />
+            <!-- WHEN -->
+
+            <RelativeLayout
+                android:id="@+id/event_info_headline_when"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                style="@style/EventInfoLayoutStyle"
+                android:gravity="top|center_vertical"
+                >
+
+                <ImageView
+                    android:id="@+id/ic_when"
+                    style="@style/EventHeadLineItemIconStyle"
+                    android:src="@drawable/ic_invite_time"/>
+
+                <TextView
+                    android:id="@+id/when_datetime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/event_info_text_size"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentStart="false"
+                    android:layout_toEndOf="@id/ic_when"
+                    android:paddingStart="@dimen/edit_view_item_content_margin_start"/>
+
+                <TextView
+                    android:id="@+id/when_repeat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/when_datetime"
+                    android:paddingStart="@dimen/edit_view_item_content_margin_start"
+                    android:layout_alignStart="@+id/when_datetime"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/event_info_text_size"/>
+
+                </RelativeLayout>
+
+            <!-- Where -->
+            <LinearLayout
+                android:id="@+id/event_info_headline_where"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                style="@style/EventInfoLayoutStyle"
+                android:gravity="top|center_vertical"
+                android:orientation="horizontal"
+                android:minHeight="20dip">
+
+                <ImageView
+                    android:id="@+id/ic_where"
+                    style="@style/EventHeadLineItemIconStyle"
+                    android:src="@drawable/ic_invite_place"/>
+
+                <TextView
+                    android:id="@+id/where"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:clickable="true"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical|start"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="4dip"
+                    android:maxLines="3"
+                    android:fadeScrollbars="false"
+                    android:scrollbarStyle="outsideOverlay"
+                    android:paddingStart="@dimen/edit_view_item_content_margin_start"
+                    android:paddingEnd="10dp"
+                    android:scrollbars="vertical"
+                    android:singleLine="false"
+                    android:textColor="@color/text_color_black"
+                    android:textColorLink="@color/text_color_black"
+                    android:textSize="@dimen/event_info_text_size"
+                    />
+
+                <!--<EditText-->
+                    <!--android:id="@+id/where"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@null"-->
+                    <!--android:editable="false"-->
+                    <!--android:focusable="true"-->
+                    <!--android:clickable="true"-->
+                    <!--android:ellipsize="end"-->
+                    <!--android:focusableInTouchMode="true"-->
+                    <!--android:includeFontPadding="false"-->
+                    <!--android:lineSpacingExtra="4dip"-->
+                    <!--android:maxLines="3"-->
+                    <!--android:minHeight="24dp"-->
+                    <!--android:fadeScrollbars="false"-->
+                    <!--android:scrollbarStyle="outsideOverlay"-->
+                    <!--android:paddingLeft="@dimen/edit_view_item_content_margin_start"-->
+                    <!--android:scrollbarAlwaysDrawVerticalTrack="true"-->
+                    <!--android:scrollbars="vertical"-->
+                    <!--android:singleLine="false"-->
+                    <!--android:textColor="@color/text_color_black"-->
+                    <!--android:textColorLink="@color/text_color_black"-->
+                    <!--android:textSize="@dimen/event_info_text_size" />-->
+            </LinearLayout>
+
+            <!-- Description -->
+            <LinearLayout
+                android:id="@+id/event_info_headline_description"
+                android:layout_marginTop="20dip"
+                style="@style/EventInfoLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|top"
+                android:minHeight="20dip"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ic_description"
+                    style="@style/EventHeadLineItemIconStyle"
+                    android:src="@drawable/ic_invite_remark"/>
+
+                <com.meizu.common.widget.FoldableTextView
+                    xmlns:common="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/description"
+                    style="?android:attr/textAppearanceLarge"
+                    android:paddingLeft="@dimen/edit_view_item_content_margin_start"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoLink="web|email|phone"
+                    android:singleLine="false"
+                    android:textColorLink="@color/event_info_link_color"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/event_info_text_size"
+                    android:lineSpacingExtra="3dp"
+                    common:mzClickToFold="true"
+                    common:mzLinkColor="@color/theme_color_red"
+                    common:mzMaxFoldLine="5"
+                    common:mzUnfoldAlignViewEdge="true"/>
+            </LinearLayout>
+
+            <!-- Calendar -->
+            <LinearLayout
+                android:id="@+id/event_info_headline_calendar"
+                android:layout_marginTop="20dip"
+                style="@style/EventInfoLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|top"
+                android:minHeight="20dip"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ic_calendar"
+                    style="@style/EventHeadLineItemIconStyle"
+                    android:src="@drawable/ic_account_details"/>
+
+                <TextView
+                    android:id="@+id/calendar_account_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/event_info_text_size"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentStart="false"
+                    android:layout_toEndOf="@id/ic_when"
+                    android:paddingStart="@dimen/edit_view_item_content_margin_start"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/bg_color"/>
+
+            <!-- REMINDERS -->
+            <LinearLayout
+                android:id="@+id/reminder_selector_container"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                style="@style/EventInfoLayoutStyle">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_edit_event_remind"/>
+
+                <LinearLayout
+                    android:id="@+id/reminder_items_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/edit_view_item_content_margin_start"
+                    android:gravity="center_vertical|left"
+                    android:orientation="vertical"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/delay_container"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height"
+                style="@style/EventInfoLayoutStyle"
+                android:gravity="center_vertical|left"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_edit_event_remind"/>
+
+                <Spinner
+                    android:id="@+id/snooze_reminder"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/edit_view_item_content_margin_start"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:contentDescription="@string/accessibility_reminder_time"
+                    android:entries="@array/availability"
+                    android:prompt="@string/accessibility_reminder_label"
+                    android:spinnerMode="dialog"
+                    android:dropDownWidth="@dimen/mz_popup_menu_item_min_width"/>
+
+
+                <ImageView
+                    android:id="@+id/right_icon_snooze"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/mz_spinner_normal_light" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider_delay_or_reminder"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/event_info_divider_margin_start"
+                android:layout_marginEnd="@dimen/event_info_divider_margin_end"
+                android:background="@drawable/mz_card_list_divider_light"
+                android:visibility="gone"/>
+
+            <View
+                android:id="@+id/event_info_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_color"
+                android:visibility="gone"/>
+
+
+            <LinearLayout
+                android:id="@+id/attendee_num_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="37dp"
+                android:layout_marginTop="17dp"
+                android:orientation="horizontal"
+                style="@style/EventInfoLayoutStyle"
+                android:visibility="gone"
+                >
+
+                <ImageView
+                    android:id="@+id/event_info_invite_attendee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_invite_attendees" />
+
+                <TextView
+                    android:id="@+id/people_attendee_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/edit_view_item_content_margin_start"
+                    android:gravity="center_vertical|start"
+                    android:textSize="@dimen/event_hint_text_size"
+                    android:textColor="@color/text_color_black" />
+            </LinearLayout>
+
+            <com.meizu.flyme.calendar.view.AttendeeListView
+                android:id="@+id/attendee_group_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="@dimen/event_info_divider_margin_start"
+                android:paddingEnd="@dimen/eventInfo_content_full_padding"
+                android:divider="@null"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--底部邀请button-->
+    <LinearLayout
+        android:id="@+id/invitation_state"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@drawable/mz_card_list_divider_light" />
+
+        <RadioGroup
+            android:id="@+id/response_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|bottom"
+            android:background="@color/mz_bottom_bar_color"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/response_no"
+                android:button="@null"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/response_decline"
+                android:textSize="@dimen/event_info_group_size"
+                android:background="@drawable/mz_list_selector_background"
+                android:textColor="@drawable/invitation_response_text_color"/>
+
+            <View
+                android:id="@+id/response_divider_left"
+                android:layout_width="2px"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/mz_divider_color" />
+
+            <RadioButton
+                android:id="@+id/response_maybe"
+                android:button="@null"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/response_maybe"
+                android:textSize="@dimen/event_info_group_size"
+                android:background="@drawable/mz_list_selector_background"
+                android:textColor="@drawable/invitation_response_text_color"/>
+
+            <View
+                android:id="@+id/response_divider_right"
+                android:layout_width="2px"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/mz_divider_color"/>
+
+            <RadioButton
+                android:id="@+id/response_yes"
+                android:button="@null"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/response_accept"
+                android:textSize="@dimen/event_info_group_size"
+                android:background="@drawable/mz_list_selector_background"
+                android:textColor="@drawable/invitation_response_text_color"/>
+
+        </RadioGroup>
+
+    </LinearLayout>
+</LinearLayout>

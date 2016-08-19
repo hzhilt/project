@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dip"
+        android:paddingLeft="17dip"
+        android:paddingRight="17dip">
+
+        <TextView
+            android:id="@+id/internalTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/text_color_dark"
+            android:textSize="16sp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_gravity="bottom"
+            android:background="#33000000" />
+    </FrameLayout>
+
+
+    <FrameLayout
+        style="@style/Widget.MeizuCommon.McPickerLayout"
+        android:layout_height="114.4dip">
+
+        <FrameLayout
+            android:id="@+id/mc_column_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:paddingLeft="@dimen/mc_picker_padding_left"
+            android:paddingRight="@dimen/mc_picker_padding_right">
+
+            <com.meizu.common.widget.ScrollTextView xmlns:common="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/mc_scroll1"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                common:mcVisibleRow="3"
+                common:mcSelectItemHeight="@dimen/mc_custom_picker_select_item_height"
+                common:mcNormalItemHeight="@dimen/mc_picker_scroll_normal_item_height" />
+        </FrameLayout>
+
+    </FrameLayout>
+</LinearLayout>

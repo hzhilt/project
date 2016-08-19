@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/list_item_height"
+        android:gravity="center_vertical"
+        android:layout_marginStart="@dimen/tool_margin_start"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/event_hint_text_size"
+            android:focusable="true"
+            android:textColor="@color/event_color_gray"
+            android:text="@string/span_start" />
+
+        <Button
+            android:id="@+id/span_start_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textSize="@dimen/event_hint_text_size"
+            android:textColor="@color/text_color_dark"
+            android:gravity="start|center_vertical"
+            android:background="@null"
+            android:singleLine="true"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginStart="@dimen/tool_divider_margin"
+        android:layout_marginEnd="@dimen/tool_divider_margin"
+        android:background="@drawable/mz_card_new_list_divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/list_item_height"
+        android:gravity="center_vertical"
+        android:layout_marginStart="@dimen/tool_margin_start"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/event_hint_text_size"
+            android:focusable="true"
+            android:textColor="@color/event_color_gray"
+            android:text="@string/span_end_date" />
+
+        <Button
+            android:id="@+id/span_end_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textSize="@dimen/event_hint_text_size"
+            android:textColor="@color/text_color_dark"
+            android:gravity="start|center_vertical"
+            android:background="@null"
+            android:singleLine="true" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginStart="@dimen/tool_divider_margin"
+        android:layout_marginEnd="@dimen/tool_divider_margin"
+        android:background="@drawable/mz_card_new_list_divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:paddingLeft="@dimen/tool_button_padding"
+        android:paddingRight="@dimen/tool_button_padding"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/span_check"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:background="@drawable/button_style"
+            android:text="@string/calc_check" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="@color/bg_color" />
+
+    <LinearLayout
+        android:id="@+id/layout_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="2dip"
+                android:layout_height="16dp"
+                android:layout_marginStart="@dimen/tool_margin_start"
+                android:layout_gravity="center_vertical"
+                android:background="@color/event_info_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="6dp"
+                android:text="@string/calc_checkout"
+                android:focusable="true"
+                android:textColor="@color/event_color"
+                android:textSize="@dimen/tool_title_text_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginStart="@dimen/tool_divider_margin"
+            android:layout_marginEnd="@dimen/tool_divider_margin"
+            android:background="@drawable/mz_card_new_list_divider" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="112dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:focusable="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/span_result_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/event_info_color"
+                    android:textSize="@dimen/tool_red_result_text_size"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/span_work_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color" />
+
+</LinearLayout>

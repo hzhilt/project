@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="12dip">
+            <com.meizu.common.widget.RoundCornerImageView
+                android:id="@+id/show_icon"
+                android:layout_width="100dp"
+                android:layout_height="73dp"
+                android:background="@drawable/calendar_widget_preview"
+                app:mzCornerRadiusX="4"
+                app:mzCornerRadiusY="4"
+                android:padding="0dip"
+                android:scaleType="fitXY" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/show_name"
+                android:text="最好的我们"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/show_desc"
+                android:text="更新到20集"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/show_counts"
+                android:text="100000已订阅"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.meizu.common.widget.CircularProgressButton
+                android:id="@+id/show_action"
+                android:focusable="false"
+                android:text="订阅"
+                android:textColor="@color/color_firebrick"
+                style="@style/ButtonSubscribe.Recommend"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

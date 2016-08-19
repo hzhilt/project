@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/dayContent"
+        android:layout_width="74dip"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="12.5dip"
+        android:paddingBottom="12.5dip"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dayOfMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fadingEdgeLength="0dp"
+            android:includeFontPadding="false"
+            android:textStyle="bold"
+            android:textColor="#b2000000"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/weekDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fadingEdgeLength="0dp"
+            android:includeFontPadding="false"
+            android:textColor="#c2000000"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/colorContent"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/timeLineTop"
+            android:layout_width="1px"
+            android:layout_height="20dip"
+            android:background="#C7C7C7" />
+
+        <com.meizu.flyme.calendar.icalendar.ColorChipView
+            android:id="@+id/eventColor"
+            android:layout_width="3.5dip"
+            android:layout_height="3.5dip"
+            android:layout_marginBottom="6dip"
+            android:layout_marginTop="6dip" />
+
+        <View
+            android:id="@+id/timeLineBottom"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="#C7C7C7" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/eventContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mz_list_selector_background"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:paddingBottom="19dip"
+        android:paddingEnd="20dip"
+        android:paddingStart="20dip"
+        android:paddingTop="19dip">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fadingEdgeLength="0dp"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/when"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dip"
+            android:ellipsize="end"
+            android:fadingEdgeLength="0dp"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:textColor="#77000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/whereAndDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dip"
+            android:ellipsize="end"
+            android:fadingEdgeLength="0dp"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:textColor="#77000000"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</LinearLayout>
